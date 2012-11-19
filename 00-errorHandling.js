@@ -1,5 +1,7 @@
 function trolinkGapsi(onTroll) {
-	onTroll("Eina į prokuratūrą");
+	setTimeout(function(){
+		onTroll("Eina į prokuratūrą");
+	}, 0);
 }
 
 try
