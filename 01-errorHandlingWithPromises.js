@@ -9,4 +9,7 @@ trolinkGapsi()
 		if (kaDaroGapsys == "Eina į prokuratūrą")
 			throw new Error("Skandalas žiniasklaidoje");
 	})
+	.fail(function onTrollFailed(e){
+		console.log("Viešieji ryšiai suvaldyti", e);
+	})
 	.done();
