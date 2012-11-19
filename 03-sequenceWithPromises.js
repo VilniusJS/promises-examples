@@ -1,10 +1,9 @@
 var Q = require("q");
 var pazadai = require("./pazadai");
 
-module.exports = function()
+var tinkamaKoalicija = function()
 {
-
-	var promise = pazadai.rinkimai()
+	return pazadai.rinkimai()
 
 		.then(function(kiekIsrinktu){
 
@@ -17,10 +16,12 @@ module.exports = function()
 
 		.then(function(arSuSocDemais){
 			if (!arSuSocDemais) throw new Error("Partneriai nesutinka");
-
-			return 1509;
 		});
+};
 
-	return promise;
+module.exports = function()
+{
+
+	return tinkamaKoalicija().then(function(){ return 1509; });
 
 };
