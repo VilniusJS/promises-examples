@@ -44,10 +44,14 @@ In computer science, future, promise, and delay refer to bla bla synchronizing b
 * execution order guarantees
 	* callback is always async
 	* chained callbacks always in order
+	* see: https://github.com/promises-aplus/promises-spec
 * execution order gotchas
 	* when you have multiple subscribers, they are executed breadth-first
 	* fail/fin/then/spread/etc in Q are all really just a fancy then()
-* value and state does not change once fulfilled
+* not all promises are created equal
+	* value and state should not change once fulfilled
+	* chain-ability is _key_
+	* see: https://gist.github.com/3889970
 
 ## Async is fun ##
 
